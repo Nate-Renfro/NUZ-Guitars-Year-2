@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--
+   NUZ Guitars - A mock small business
+   Authors:          Nate Renfro, Ulyses Parra, Zerrick Orion
+   Date:             5.12.17
+   Filename:         shop.html
+   Supporting files: index.html, about.html, NUZStore.js, styles.css
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>NUZ Guitar Repairs</title>
+
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">
+
+    <!-- Custom CSS Links -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Custom Font Links -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Yellowtail|Ek+Mukta:500"
+    rel="stylesheet">
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+    integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+    crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand yellowTailFont headerRed" href="index.html">NUZ Guitars</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Body of the webpage -->
+    <div id="main" class="container container-fluid">
+
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 navCol muktaFont">
+          <nav class="homeNav">
+            <ul class="nav nav-pills nav-stacked">
+              <li role="presentation"><a href="index.html">Home</a></li>
+              <li role="presentation" class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                  Shop <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li role="presentation"><a href="shop.html">Stock Guitars</a></li>
+                  <li role="presentation"><a href="custom.html">Custom Guitars</a></li>
+                  <li role="presentation"><a href="repair.html">Repairs</a></li>
+                </ul>
+              </li>
+              <li role="presentation"><a href="about.html">Contact Us</a></li>
+              <li role="presentation"><a href="about.html#about">About Us</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="col-xs-12
+                    col-sm-8 col-sm-offset-1
+                    col-md-8 col-md-offset-1
+                    col-lg-8 col-lg-offset-1">
+
+          <div id="repairs" class="row">
+            <h1 class="yellowTailFont headerRed">Repairs</h1>
+            <div class="sidebar-content content muktaFont textNavy">
+              <p>
+                We can perform repairs on any equipment that needs it, whether
+                it was purchased from us at NUZ Guitars, or anywhere else.
+              </p>
+              <br>
+              <p>
+                You simply need to fill out our repair send in form, so that we
+                can understand what work is required and be prepared to provide
+                a hasty solution. This way you'll receive your guitar back in
+                peak condition as soon as possible.
+              </p>
+            </div>
+            <br>
+            <div class="content">
+              <div class="row">
+                <p class="muktaFont textNavy">Required items are marked with <span class="textRed">!</span></p>
+              </div>
+              <div id="formRow" class="row">
+                <form id="repairForm" name="repairForm" action="#" method="post">
+
+                  <div class="col-lg-4 col-md-4 col-sm-2 col-xs-12 formLeftCol">
+                    <div class="form-group">
+                      <label class="textNavy" for="fName"><span class="textRed">!</span> First Name:</label>
+                      <input type="text" class="form-control" id="fName" name="fName" placeholder="please enter your first name">
+                    </div>
+                    <div class="form-group">
+                      <label class="textNavy" for="lName"><span class="textRed">!</span> Last Name:</label>
+                      <input type="text" class="form-control" id="lName" name="lName" placeholder="please enter your last name">
+                    </div>
+                    <div class="form-group">
+                      <label class="textNavy" for="email"><span class="textRed">!</span> Email address:</label>
+                      <input  type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                      <label class="textNavy" for="phone">Phone Number:</label>
+                      <input type="tel" class="form-control" id="phone" name="phone" placeholder="(000) 000-0000">
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-4 col-sm-2 col-xs-12 formRightCol">
+                    <div class="form-group">
+                      <label class="textNavy" for="description">Description of the Problem:</label>
+                      <textarea placeholder="We would greatly appreciate if you took the time to describe the problem in this field. Be as concise as possible in under 250 characters."
+                                id="description" class="form-control" name="description"
+                                rows="8" cols="80" maxlength="250"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label class="textNavy" for="description"><span class="textRed">!</span> Shipping Address:</label>
+                      <input type="text" id="address" name="address" class="form-control" placeholder="Please enter your home or receiving address.">
+                    </div>
+                  </div>
+
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <button onclick="checkForm()" type="submit" class="btn btn-red">Submit</button>
+                  </div>
+                </form>
+                <div class="row">
+                  <div class="col-xs-12
+                              col-sm-8 col-sm-offset-2
+                              col-md-10 col-md-offset-1
+                              col-lg-10 col-lg-offset-1">
+                    <div id="formSuccess">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- /Container -->
+    <br>
+
+    <footer class="fixed-bottom">
+      <p>&copy; 2017 NUZ Guitars LLC <span class="textTeal">|</span> [Address to be listed later] <span class="textTeal">|</span> <a href="about.html#contact">Contact Us</a></p>
+    </footer>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="NUZStore.js"></script>
+
+
+  </body>
+</html>

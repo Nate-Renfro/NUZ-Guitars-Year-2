@@ -1,0 +1,280 @@
+/*
+   NUZ Guitars - A mock small business
+   Authors:          Nate Renfro, Ulyses Parra, Zerrick Orion
+   Date:             5.12.17
+   Filename:         styles.css
+   Supporting files: none
+*/
+
+/*General styles for the webpage(s)*/
+/*XS Devices, Phones*/
+@media only screen and (min-width: 480px) {}
+/*Sm Devices, Tablets*/
+@media only screen and (min-width: 768px) {}
+/*Md Devices, Desktops*/
+@media only screen and (min-width: 992px) {}
+/*Lg Devices, Wide Screens*/
+@media only screen and (min-width: 1200px) {}
+
+body {
+  background-color: rgb(106, 113, 124);
+}
+
+/*Styles for main container*/
+#main {
+  margin-top: 85px;
+}
+
+
+/*Custom Font Styles*/
+.yellowTailFont {
+  font-family: 'Yellowtail', cursive;
+}
+
+.muktaFont {
+  font-family: 'Ek Mukta', sans-serif;
+}
+
+.headerTeal {
+  color: rgb(0, 197, 185);
+  text-shadow: 0 -2px 0 rgb(255, 255, 255);
+}
+
+.textTeal {
+  color: rgb(0, 197, 185);
+}
+
+.headerRed {
+  color: rgb(240, 87, 104);
+  text-shadow: 0 -2px 0 rgb(255, 255, 255);
+}
+
+.textRed {
+  color: rgb(240, 87, 104);
+}
+
+.headerNavy {
+  color: rgb(47, 56, 72);
+  text-shadow: 0 -2px 0 rgb(255, 255, 255);
+}
+
+.textNavy {
+  color: rgb(47, 56, 72);
+}
+
+strong {
+  text-decoration: underline;
+}
+
+
+/*Styles for Navbar elements*/
+.navCol {
+  padding: 15px;
+  background-color: rgb(47, 56, 72);
+}
+
+.homeNav a {
+  color: rgb(240, 87, 104);
+}
+
+.nav-pills li a {
+  border-radius: 0;
+}
+
+.homeNav .dropdown-menu a {
+  color: rgb(255, 255, 255);
+}
+
+.navbar-inverse {
+  background: rgb(47, 56, 72);
+  border: rgb(47, 56, 72);
+}
+
+.navbar-inverse .navbar-brand {
+  font-size: 52px;
+  margin-top: 2%;
+  padding-bottom: 5%;
+  color: rgb(240, 87, 104);
+  text-shadow: 0 -2px 0 rgb(255, 255, 255);
+}
+
+.navbar-inverse .navbar-brand:hover {
+    color: rgb(240, 87, 104);
+    background-color: transparent;
+}
+
+.dropdown-menu {
+  background-color: rgb(47, 56, 72);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: transparent;
+  border-radius: 0;
+  width: 100%;
+}
+
+.dropdown-menu li a:hover {
+  background: rgb(0, 197, 185);
+  color: rgb(255, 255, 255);
+}
+
+
+/*Styles for the majority of text containing elements*/
+.content {
+  padding: 15px;
+  margin: 5px;
+  padding-bottom: 75px;
+  font-size: 16px;
+  text-align: center;
+  background-color: rgb(225, 225, 225);
+  box-shadow: -5px 5px rgb(47, 56, 72), 5px -5px rgb(0, 197, 185);
+  box
+}
+
+.contentCaro {
+  padding: 15px;
+  margin: 5px;
+  padding-bottom: 5%;
+  font-size: 16px;
+  text-align: center;
+  background-color: rgb(225, 225, 225);
+  box-shadow: -5px 5px rgb(47, 56, 72), 5px -5px rgb(0, 197, 185);
+  box
+}
+
+
+/*Styles for contact information list*/
+.contactList {
+  text-align: left;
+}
+
+.contactList li {
+  padding: 5px;
+}
+
+/*Styles for icons & images*/
+.icon {
+  text-align: left;
+  width: 25px;
+  height: 25px;
+}
+
+/*Styles for the home carousel*/
+.carousel {
+  /*height: 300px;*/
+  height: 90%;
+  width: 100%;
+  background-image: url(images/patternGreyTeal.png);
+}
+
+.caroItem {
+  height: 100%;
+  width: 100%;
+
+  padding: 5% 5% 5% 15%;
+}
+
+.caroItem img {
+  height: 65%;
+  width: 90%;
+  padding: 5%;
+}
+
+
+/*Styles for shop gallery*/
+.shopRow {
+  float: none;
+}
+
+.thumbnail {
+  background-color: rgb(47, 56, 72);
+  border: 0px;
+  border-radius: 0px;
+
+  padding: 10%;
+}
+
+.thumbnail a {
+  color: rgb(225, 225, 225);
+}
+
+.galleryImg {
+  background-image: url(images/patternGreyTeal.png);
+  background-size: cover;
+}
+
+.caption h3 {
+  color: rgb(0, 197, 185);
+}
+
+.caption p {
+  color: rgb(225, 225, 225);
+}
+
+.btn-red {
+  background-color: rgb(240, 87, 104);
+  border: 0px;
+  color: rgb(255, 255, 255);
+}
+
+
+/*Styles for the customs table*/
+.cust td{
+  height: 100px;
+  width: 100px;
+
+  background-size:
+}
+
+.custom{
+  background-image: url(images/patternGreyTeal.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#body{
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+#neck{
+  background-size: 165%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+
+/*Styles for the repair form element*/
+
+.form-control {
+  resize: none;
+  height: 90%;
+}
+
+.formLeftCol {
+  width: 50%;
+  height: 100%;
+}
+
+.formRightCol {
+  width: 50%;
+  height: 100%;
+}
+
+
+/*Styles for the footer element*/
+footer {
+  background: rgb(47, 56, 72);
+  margin-bottom: 0;
+  height: 45px;
+}
+
+footer, footer a {
+  margin-top: 30px;
+  padding-top: 15px;
+  text-align: center;
+  color: rgb(225, 225, 225);
+}
+
+footer a:hover {
+  color: rgb(240, 87, 104);
+}

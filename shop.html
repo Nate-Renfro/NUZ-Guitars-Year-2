@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--
+   NUZ Guitars - A mock small business
+   Authors:          Nate Renfro, Ulyses Parra, Zerrick Orion
+   Date:             5.12.17
+   Filename:         shop.html
+   Supporting files: index.html, about.html, NUZStore.js, styles.css
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>NUZ Guitar Gallery</title>
+
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">
+
+    <!-- Custom CSS Links -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Custom Font Links -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Yellowtail|Ek+Mukta:500"
+    rel="stylesheet">
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+    integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+    crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand yellowTailFont headerRed" href="index.html">NUZ Guitars</a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="main" class="container container-fluid">
+
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 navCol muktaFont">
+          <nav class="homeNav">
+            <ul class="nav nav-pills nav-stacked">
+              <li role="presentation"><a href="index.html">Home</a></li>
+              <li role="presentation" class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                  Shop <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li role="presentation"><a href="shop.html">Stock Guitars</a></li>
+                  <li role="presentation"><a href="custom.html">Custom Guitars</a></li>
+                  <li role="presentation"><a href="repair.html">Repairs</a></li>
+                </ul>
+              </li>
+              <li role="presentation"><a href="about.html">Contact Us</a></li>
+              <li role="presentation"><a href="about.html#about">About Us</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div id="shopCol" class="col-xs-12
+                                 col-sm-8 col-sm-offset-1
+                                 col-md-8 col-md-offset-1
+                                 col-lg-8 col-lg-offset-1">
+          <h1 class="yellowTailFont headerRed">Our Inventory</h1>
+          <div class="content">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="thumbnail">
+                  <img class="galleryImg" src="images/transparent.png" alt="Guitar">
+                  <div class="caption muktaFont muktaFont">
+                    <h3>Guitar Name</h3>
+                    <p>
+                      Brief description. Brief description.
+                    </p>
+                    <p>
+                      <a href="#" class="btn btn-red" role="button">Buy Now</a>
+                      $[Price]
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="thumbnail">
+                  <img class="galleryImg" src="images/transparent.png" alt="Guitar">
+                  <div class="caption muktaFont">
+                    <h3>Guitar Name</h3>
+                    <p>
+                      Brief description. Brief description.
+                    </p>
+                    <p>
+                      <a href="#" class="btn btn-red" role="button">Buy Now</a>
+                      $[Price]
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="thumbnail">
+                  <img class="galleryImg" src="images/transparent.png" alt="Guitar">
+                  <div class="caption muktaFont">
+                    <h3>Guitar Name</h3>
+                    <p>
+                      Brief description. Brief description.
+                    </p>
+                    <p>
+                      <a href="#" class="btn btn-red" role="button">Buy Now</a>
+                      $[Price]
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="thumbnail">
+                  <img class="galleryImg" src="images/transparent.png" alt="Guitar">
+                  <div class="caption muktaFont">
+                    <h3>Guitar Name</h3>
+                    <p>
+                      Brief description. Brief description.
+                    </p>
+                    <p>
+                      <a href="#" class="btn btn-red" role="button">Buy Now</a>
+                      $[Price]
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="thumbnail">
+                  <img class="galleryImg" src="images/transparent.png" alt="Guitar">
+                  <div class="caption muktaFont">
+                    <h3>Guitar Name</h3>
+                    <p>
+                      Brief description. Brief description.
+                    </p>
+                    <p>
+                      <a href="#" class="btn btn-red" role="button">Buy Now</a>
+                      $[Price]
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="thumbnail">
+                  <img class="galleryImg" src="images/transparent.png" alt="Guitar">
+                  <div class="caption muktaFont">
+                    <h3>Guitar Name</h3>
+                    <p>
+                      Brief description. Brief description.
+                    </p>
+                    <p>
+                      <a href="#" class="btn btn-red" role="button">Buy Now</a>
+                      $[Price]
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="thumbnail">
+                  <img class="galleryImg" src="images/transparent.png" alt="Guitar">
+                  <div class="caption muktaFont">
+                    <h3>Guitar Name</h3>
+                    <p>
+                      Brief description. Brief description.
+                    </p>
+                    <p>
+                      <a href="#" class="btn btn-red" role="button">Buy Now</a>
+                      $[Price]
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="thumbnail">
+                  <img class="galleryImg" src="images/transparent.png" alt="Guitar">
+                  <div class="caption muktaFont">
+                    <h3>Guitar Name</h3>
+                    <p>
+                      Brief description. Brief description.
+                    </p>
+                    <p>
+                      <a href="#" class="btn btn-red" role="button">Buy Now</a>
+                      $[Price]
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                <div class="thumbnail">
+                  <img class="galleryImg" src="images/transparent.png" alt="Guitar">
+                  <div class="caption muktaFont">
+                    <h3>Guitar Name</h3>
+                    <p>
+                      Brief description. Brief description.
+                    </p>
+                    <p>
+                      <a href="#" class="btn btn-red" role="button">Buy Now</a>
+                      $[Price]
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+
+
+    </div><!-- /Container -->
+
+    <footer class="fixed-bottom">
+      <p>&copy; 2017 NUZ Guitars LLC <span class="textTeal">|</span> [Address to be listed later] <span class="textTeal">|</span> <a href="about.html#contact">Contact Us</a></p>
+    </footer>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="NUZStore.js"></script>
+
+  </body>
+</html>
