@@ -1,9 +1,8 @@
 /*
-   NUZ Guitars - A mock small business
+   NUZ Guitars Year 2 - A continuation into form validation
 
-   Authors:          Nate Renfro, Ulyses Parra, Zerrick Orion
-   Date:             5.12.17
-
+   Authors:          Nate Renfro, Zerrick Orion
+   Date:             9.19.17
    Filename:         NUZStore.js
    Supporting files: none
 */
@@ -55,4 +54,21 @@ var bridge = document.getElementById("bridg");
 var bodImage = document.getElementById("body");
 var neckImage = document.getElementById("neck");
 var bridgeImage = document.getElementById("bridge");
+}
+
+
+// NR 9.19.17 - Setup event listeners for use throughout the page
+function createEventListeners() {
+  console.log("Creating Event Listeners");
+  }
+}
+
+
+// NR 9.19.17 - run createEventListeners() function upon page loading
+if (window.addEventListener) {
+  window.addEventListener("load", createEventListeners, false);
+  console.log("Chrome page load");
+} else if (window.attachEvent)  {
+  window.attachEvent("onload", createEventListeners);
+  console.log("Explorer page load");
 }
