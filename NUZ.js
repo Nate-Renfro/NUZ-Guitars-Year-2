@@ -3,21 +3,28 @@
 
    Authors:          Nate Renfro, Zerrick Orion
    Date:             9.19.17
-   Filename:         NUZStore.js
+   Filename:         NUZ.js
    Supporting files: none
 */
 "use strict";
 
 // NR 9.19.17 - Built last year, being restructured and updated for further form validation
 function validateRepairForm() {
-  console.log("Combing repair form");
-  var fName = document.getElementById("fName").value; //
+  alert("Combing repair form");
+  var fName = document.getElementById("fName").value;
+  console.log(fName);
   var lName = document.getElementById("lName").value;
+  console.log(lName);
   var email = document.getElementById("email").value;
+  console.log(email);
   var phone = document.getElementById("phone").value;
+  console.log(phone);
   var description = document.getElementById("description").value;
+  console.log(description);
   var address = document.getElementById("address").value;
+  console.log(address);
   var successMessage = document.getElementById("formRow");
+  console.log(successMessage);
 
   //validates that first & last name fields are filled
   if (fName == "" || lName == "") {
