@@ -6,10 +6,12 @@
    Filename:         NUZStore.js
    Supporting files: none
 */
+"use strict";
 
-function checkForm() {
-  // retreive and store all necessary HTML elements in variables
-  var fName = document.getElementById("fName").value;
+// NR 9.19.17 - Built last year, being restructured and updated for further form validation
+function validateRepairForm() {
+  console.log("Combing repair form");
+  var fName = document.getElementById("fName").value; //
   var lName = document.getElementById("lName").value;
   var email = document.getElementById("email").value;
   var phone = document.getElementById("phone").value;
@@ -46,7 +48,7 @@ function checkForm() {
    new item is selected in the lists */
 document.onchange = customChange;
 
-function customChange(){
+function customChange() {
 //declare variables for body, neck, and bridge
 var body = document.getElementById("bod");
 var neck = document.getElementById("nck");
@@ -56,15 +58,12 @@ var neckImage = document.getElementById("neck");
 var bridgeImage = document.getElementById("bridge");
 }
 
-
 // NR 9.19.17 - Setup event listeners for use throughout the page
 function createEventListeners() {
   console.log("Creating Event Listeners");
-  }
 }
 
-
-// NR 9.19.17 - run createEventListeners() function upon page loading
+// NR 9.19.17 - runs createEventListeners() function upon page loading */
 if (window.addEventListener) {
   window.addEventListener("load", createEventListeners, false);
   console.log("Chrome page load");
