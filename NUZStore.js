@@ -7,7 +7,7 @@
    Filename:         NUZStore.js
    Supporting files: none
 */
-
+var formValidity = true;
 function checkForm() {
   // retreive and store all necessary HTML elements in variables
   var fName = document.getElementById("fName").value;
@@ -68,7 +68,36 @@ if (body.value >= 1){
 }
 }
 
-function validateForm(){
-  var fieldsetValidity = true;
+function validateForm(evt){
+  if (evt.preventDefault) {//prevents the default HTML form submission
+  evt.preventDefault();//prevents default submission
+  }else {//else
+    evt.returnValue = false;//returns the value as false
+  }//close else
+  formValidity = false;//sets form validity to false
+alert("I DUN BEEN CLICKED");
+if (formValidity === true){//if form is valid
+document.getElementById("errorText").innerHTML = "";//no error text
+document.getElementById(errorText.style.display = "none");//makes error text box invisible
+document.getElementById("customForm").submit();//submits form
+} else {//if form isnt valid
+  document.getElementById("errorText").innerHTML = "Please fix the indicated problems and then resubmit your order.";//error message
+  document.getElementById("errorText").style.display = "block";//makes error message box visible
+  scroll(0,0);//Scrolls to top of page
+}//close else
+}
 
+function createEventListeners(){
+  var form = document.getElementById("customForm");//create variable for the form
+  if (form.addEventListener) {//google chrome
+    form.addEventListener("submit", validateForm, false);//triggers validateForm on Submit
+  } else if (form.attachEvent){//internet explorer
+    form.attachEvent("onsubmit", validateForm);//triggers validateForm on Submit
+  }//close else if
+}
+
+if (document.addEventListener){
+  document.addEventListener("load", createEventListeners, false)
+} else if (document.attachEvent) {
+document.attachEvent("onload", createEventListeners)
 }
