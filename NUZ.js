@@ -14,19 +14,19 @@ var invalidBorder = "2px solid rgba(255, 0, 0, 0.75)";
 function validateRepairForm() {
   alert("Combing repair form");
   var fName = document.getElementById("fName").value;
-  console.log(fName);
+  // console.log(fName);
   var lName = document.getElementById("lName").value;
-  console.log(lName);
+  // console.log(lName);
   var email = document.getElementById("email").value;
-  console.log(email);
+  // console.log(email);
   var phone = document.getElementById("phone").value;
-  console.log(phone);
+  // console.log(phone);
   var description = document.getElementById("description").value;
-  console.log(description);
+  // console.log(description);
   var address = document.getElementById("address").value;
-  console.log(address);
+  // console.log(address);
   var successMessage = document.getElementById("formRow");
-  console.log(successMessage);
+  // console.log(successMessage);
 
   //validates that first & last name fields are filled
   if (fName == "" || lName == "") {
@@ -146,10 +146,12 @@ function validateForm(evt) {
     case "repairForm":
       validateRepairForm();
       break;
+    case "customForm":
+      validateCustomForm();
     default:
   }
 
-  alert(formValidity);
+  // alert(formValidity);
   if (formValidity === true) {
     document.getElementsByTagName("form")[0].submit();
   }
