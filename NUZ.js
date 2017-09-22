@@ -10,52 +10,57 @@
 var formValidity = true;
 var invalidBorder = "2px solid rgba(255, 0, 0, 0.75)";
 
-// NR 9.19.17 - Built last year, being restructured and updated for further form validation
+// NR 9.22.17 - validates the repair request form on the repair page
 function validateRepairForm() {
-  alert("Combing repair form");
-  var fName = document.getElementById("fName").value;
+  // alert("Combing newsletter signup form");
+  var fName = document.getElementById("fName"); // Retrieves the user's first name input
   // console.log(fName);
-  var lName = document.getElementById("lName").value;
+  var lName = document.getElementById("lName"); // Retrieves the user's last name input
   // console.log(lName);
-  var email = document.getElementById("email").value;
+  var email = document.getElementById("email"); // Retrieves the user's email input
   // console.log(email);
-  var phone = document.getElementById("phone").value;
-  // console.log(phone);
-  var description = document.getElementById("description").value;
-  // console.log(description);
-  var address = document.getElementById("address").value;
-  // console.log(address);
-  var successMessage = document.getElementById("formRow");
-  // console.log(successMessage);
+  var description = document.getElementById
+  var errorMessage = document.getElementById("messageDiv"); // Div for errors
+  // console.log(errorMessage);
 
-  //validates that first & last name fields are filled
-  if (fName == "" || lName == "") {
-    alert("Please supply all of the required information.");
+  try {
+    // Start fieldset fresh by removing invalid colors
+    fName.style.border = "auto";
+    lName.style.border = "auto";
+    email.style.border = "auto";
+    errorMessage.style.display = "none"; // Make error message box invisible
+    // alert("Executing try clause");
+    // Checks if all createAccount elements have input in them
+    if (fName.value !== "" && lName.value !== "" && email.value !== "") {
+      // alert("all inputs completed");
+      formValidity = true; // All inputs have been completed, the user is signed up
+    }
+    // Checks if all elements are empty
+    else if (fName.value === "" && lName.value === "" && email.value === "") {
+      formValidity = false; // Since the account is optional, all empty is valid
+      throw "If you meant to submit, please fill out the information above before doing so again.If not, refresh your page."
+    }
+    else { // Checks if they aren't ALL full, or ALL empty
+      formValidity = false; // missing one or more elements falsifies fieldset
+      // Tell user to fix the missing elements
+      throw "Please complete all fields if you would like to sign up for the newsletter.";
+    }
   }
-  //validates that email input is filled
-  else if (email == "") {
-    alert("Please supply all of the required information.");
-  }
-  //validates that address input is filled
-  else if (address == "") {
-    alert("Please supply all of the required information.");
-  }
-  //displays a success message to the user after submission
-  else {
-    successMessage.innerHTML = "<div class='col-lg-10 col-lg-offset-1 col-md-10 "+
-                               "col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 "+
-                               "col-xs-offset-1 muktaFont'>Thank you for submitting "+
-                               "the repair send in form. Send your instrument to us "+
-                               "at your earliest convenience, and we'll have it in "+
-                               "perfect condition and back in your hands as soon "+
-                               "as possible.</div>";
+  catch (msg) { // Catches thrown error (if any)
+    errorMessage.style.display = "block"; // Displays error message box
+    errorMessage.innerHTML = "<span>&#9888</span> " + msg; // inserts error message into the space for error message
+    formValidity = false; // Sets form validity to false to stop submission
+    // Make password fields red to denopte error
+    fName.style.border = invalidBorder;
+    lName.style.border = invalidBorder;
+    email.style.border = invalidBorder;
   }
 }
 
 
 // NR 9.20.17 - validates the newsletter signup form on the contact page
 function validateNewsletterForm() {
-  alert("Combing newsletter signup form");
+  // alert("Combing newsletter signup form");
   var fName = document.getElementById("fName"); // Retrieves the user's first name input
   // console.log(fName);
   var lName = document.getElementById("lName"); // Retrieves the user's last name input
@@ -79,12 +84,13 @@ function validateNewsletterForm() {
     }
     // Checks if all elements are empty
     else if (fName.value === "" && lName.value === "" && email.value === "") {
-      formValidity = true; // Since the account is optional, all empty is valid
+      formValidity = false; // Since the account is optional, all empty is valid
+      throw "If you meant to submit, please fill out the information above before doing so again. If not, refresh your page."
     }
     else { // Checks if they aren't ALL full, or ALL empty
       formValidity = false; // missing one or more elements falsifies fieldset
       // Tell user to fix the missing elements
-      throw "Please complete all fields if you wish to sign up for the newsletter.";
+      throw "Please complete all fields if you would like to sign up for the newsletter.";
     }
   }
   catch (msg) { // Catches thrown error (if any)
@@ -127,10 +133,10 @@ function removeSelectDefaults() {
 
 // NR 8.31.17 - Built to execute upon user submitting order form
 function validateForm(evt) {
-  alert("Beginning validation comb");
+  // alert("Beginning validation comb");
   var errorMessage = document.getElementById("errorText");
   var submittedForm = evt.srcElement.id;
-  alert(submittedForm);
+  // alert(submittedForm);
   if (evt.preventDefault) {
     evt.preventDefault(); // Prevents browser from submitting form before validation
   }
