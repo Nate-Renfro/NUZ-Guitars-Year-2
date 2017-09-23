@@ -85,14 +85,21 @@
             <div class="sidebar-content content muktaFont textNavy">
               <p>
                 We can perform repairs on any equipment that needs it, whether
-                it was purchased from us at NUZ Guitars, or anywhere else.
+                it was purchased from us at NUZ Guitars, or anywhere else. You
+                can even send it to us via postal service if you can't make it
+                to the store in person. If you are sending your guitar through
+                the post, you simply need to fill out our repair send in form.
               </p>
               <br>
               <p>
-                You simply need to fill out our repair send in form, so that we
-                can understand what work is required and be prepared to provide
-                a hasty solution. This way you'll receive your guitar back in
-                peak condition as soon as possible.
+                To assure that we can understand what work is required and be prepared to provide a hasty solution,
+                we ask that you take the extra time to provide a short description
+                of the problem. This way you'll get your guitar back in peak condition
+                as soon as possible.
+              </p>
+              <br>
+              <p>
+
               </p>
             </div>
             <br>
@@ -101,41 +108,56 @@
                 <p class="muktaFont textNavy">Required items are marked with <span class="textRed">!</span></p>
               </div>
               <div id="formRow" class="row">
-                <form id="repairForm" name="repairForm" action="results.html" method="post" novalidate="novalidate">
+                <form id="repairForm" name="repairForm" action="results.html" novalidate="novalidate">
 
                   <div class="col-lg-4 col-md-4 col-sm-2 col-xs-12 formLeftCol">
+                    <!-- First Name -->
                     <div class="form-group">
                       <label class="textNavy" for="fName"><span class="textRed">!</span> First Name:</label>
-                      <input type="text" class="form-control reqInput" id="fName" name="fName" placeholder="please enter your first name" required>
+                      <input type="text" class="form-control reqInput input" id="fName" name="fName" placeholder="please enter your first name" required>
                     </div>
+                    <!-- last Name -->
                     <div class="form-group">
                       <label class="textNavy" for="lName"><span class="textRed">!</span> Last Name:</label>
-                      <input type="text" class="form-control reqInput" id="lName" name="lName" placeholder="please enter your last name" required>
+                      <input type="text" class="form-control reqInput input" id="lName" name="lName" placeholder="please enter your last name" required>
                     </div>
+                    <!-- Description Field -->
                     <div class="form-group">
                       <label class="textNavy" for="description">Description of the Problem:</label>
                       <textarea placeholder="We would greatly appreciate if you took the time to describe the problem in this field. Be as concise as possible in under 250 characters."
-                                id="description" class="form-control" name="description"
-                                rows="8" cols="80" maxlength="250"></textarea>
+                                id="description" class="form-control input" name="description"
+                                rows="8" cols="80" maxlength="250" required></textarea>
                     </div>
                   </div>
 
                   <div class="col-lg-4 col-md-4 col-sm-2 col-xs-12 formRightCol">
+                    <!-- Email -->
                     <div class="form-group">
                       <label class="textNavy" for="email"><span class="textRed">!</span> Email address:</label>
-                      <input  type="email" class="form-control reqInput" id="email" name="email" placeholder="name@example.com" required>
+                      <input  type="email" class="form-control reqInput input" id="email" name="email" placeholder="name@example.com" required>
                     </div>
+                    <!-- Phone # -->
                     <div class="form-group">
                       <label class="textNavy" for="phone">Phone Number:</label>
-                      <input type="tel" class="form-control" id="phone" name="phone" placeholder="(000) 000-0000">
+                      <input type="tel" class="form-control input" id="phone" name="phone" placeholder="(000) 000-0000">
                     </div>
-                    <div class="form-group">
-                      <label class="textNavy" for="description"><span class="textRed">!</span> Street Address:</label>
-                      <input type="text" id="delivAddress" name="address" class="form-control reqInput" placeholder="Of the receiving address." required>
+                    <!-- Preferred Contact -->
+                    <div id="preferredContact" class="form-group">
+                      <label for="contactMethod"> Preferred Method of Contact:</label>
+                      <select id="contactMethod" class="form-control input" required>
+                        <option value="email">Email</option>
+                      	<option value="telephone">Telephone</option>
+                      </select>
                     </div>
+                    <!-- Street Address -->
                     <div class="form-group">
-                      <label class="textNavy" for="description"><span class="textRed">!</span> State:</label>
-                      <select class="form-control selectpicker reqInput" required>
+                      <label class="textNavy" for="delivAddress"><span class="textRed">!</span> Street Address:</label>
+                      <input type="text" id="delivAddress" name="address" class="form-control reqInput input" placeholder="Of the receiving address." required>
+                    </div>
+                    <!-- State -->
+                    <div class="form-group">
+                      <label class="textNavy" for="delivState"><span class="textRed">!</span> State:</label>
+                      <select id="delivState" class="form-control reqInput input" required>
                         <option value="AL">Alabama</option>
                       	<option value="AK">Alaska</option>
                       	<option value="AZ">Arizona</option>
@@ -192,7 +214,7 @@
                   </div>
 
                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <button onclick="validateRepairForm()" type="submit" class="btn btn-red">Submit</button>
+                    <button id="repairFormSubmit" type="submit" class="btn btn-red">Submit</button>
                   </div>
                 </form>
                 <div class="row">
@@ -200,7 +222,7 @@
                               col-sm-8 col-sm-offset-2
                               col-md-10 col-md-offset-1
                               col-lg-10 col-lg-offset-1">
-                    <div id="formSuccess">
+                    <div id="messageDiv">
 
                     </div>
                   </div>

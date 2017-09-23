@@ -254,11 +254,11 @@ strong {
 }
 
 
-/*Styles for the repair form element*/
+/*Styles for form element*/
 
 .form-control {
   resize: none;
-  height: 90%;
+  height: 34px;
 }
 
 .formLeftCol {
@@ -269,6 +269,14 @@ strong {
 .formRightCol {
   width: 50%;
   height: 100%;
+}
+
+#description {
+  height: 100%;
+}
+
+#preferredContact {
+  display: block;
 }
 
 #messageDiv {
