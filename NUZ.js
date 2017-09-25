@@ -19,12 +19,15 @@ function validateRepairForm() {
   // console.log(required);
   var descriptionField = document.getElementById("description");
   // console.log(descriptionField);
+  var email = document.getElementById("email"); // Retrieves the user's email input
+  // console.log(email);
   var phoneNum = document.getElementById("phone");
   // console.log(phoneNum);
   var errorMessage = document.getElementById("messageDiv"); // Div for errors
   // console.log(errorMessage);
 
   try {
+    // alert("Executing try clause");
     // Start fieldset fresh by removing invalid colors
     for (var i = 0; i < inputs.length; i++) {
       if (inputs[i].value === "") {
@@ -33,24 +36,13 @@ function validateRepairForm() {
             throw "Please complete all required information.";
           }
         }
+        if (email.value === "" && phoneNum.value === "" ) {
+          throw "Please provide at least one method to contact you by."
+        }
       }
+
     }
     errorMessage.style.display = "none"; // Make error message box invisible
-    // alert("Executing try clause");
-    // Checks if all createAccount elements have input in them
-    if (fName.value !== "" && lName.value !== "" && email.value !== "") {
-      // alert("all inputs completed");
-      formValidity = true; // All inputs have been completed, the user is signed up
-    }
-    // Checks if all elements are empty
-    else if (fName.value === "" && lName.value === "" && email.value === "") {
-      formValidity = true; // Since the account is optional, all empty is valid
-    }
-    else { // Checks if they aren't ALL full, or ALL empty
-      formValidity = false; // missing one or more elements falsifies fieldset
-      // Tell user to fix the missing elements
-      throw "Please complete all fields if you wish to sign up for the newsletter.";
-    }
   }
   catch (msg) { // Catches thrown error (if any)
     errorMessage.style.display = "block"; // Displays error message box
@@ -108,8 +100,6 @@ function validateNewsletterForm() {
     email.style.border = invalidBorder;
   }
 }
-
-
 
 
 /* Call function to run everytime a

@@ -276,7 +276,7 @@ strong {
 }
 
 #preferredContact {
-  display: block;
+  display: none;
 }
 
 #messageDiv {
